@@ -1,11 +1,16 @@
 ﻿#Prompted Variables 
 $cmp = Read-Host "Enter short name of server you are checking in lowercase: "
 $adm = Read-Host "Enter your cnetID"
+#TODO  Add prompt for SA credentials, needed to connect to server to get AV info
 
 #Constructed variables
 $ct = $cmp.ToString().Length
 $srch = $cmp.ToString().Insert($ct, "*")
 $fqdn = $cmp.ToString().Insert($ct,".uchicago.edu")
+#TODO Change AV config path to SA user documents folder
+$avConfigPath = "C:\Users\_sa-cjhaselton\Documents\avinfo.xml"
+$smc = "C:\Program Files (x86)\Symantec\Symantec Endpoint Protection\12.1.7061.6600.105\
+Bin\smc.exe -exportconfig C:\Users\_sa-cjhaselton\Documents\avinfo.xml"
 
 # Admin group check
 Write-Host ""
@@ -58,7 +63,7 @@ else
 #SCCM Patch Group Check
 Write-Host ""
 Write-Host "Checking SCCM patch group membership..." -ForegroundColor Yellow
-{
+
 cd CMW:
 $ccmp = $cmp.ToUpper()
 
@@ -123,7 +128,7 @@ switch($g)
         } #end 2
 }# end switch
 cd C:
-}
+
 
 #SCCM ManagedBy Group check
 Write-Host ""
