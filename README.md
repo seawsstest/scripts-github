@@ -1,6 +1,6 @@
 # GitHub Test Scripts
-This is a sample repo used to test out the basic git processes as well as test configuring IDE integrations with github.  This repo lives on github
-Feel free to add information below
+This is a sample repo used to test out the basic git processes as well as test configuring IDE integrations with github.  This repo lives on Github in a Github organization called seawsstest.  The organization is free so all repos created in it are public. **Please do not add sensitive code to any repos created in this org**
+
 
 # Getting Started
 To work with the GitHub repo, you can download GitHub Desktop here: https://desktop.github.com/.  GitHub Desktop has a built in interactive tutorial...complete with a sample repo... that you can walk through to learn the basics of git.
@@ -14,4 +14,3 @@ TODO: Describe and show how to build your code and run the tests.
 # Contribute
 TODO: Explain how other users and developers can contribute to make your code better.
 
-Testing by Michael Wu
