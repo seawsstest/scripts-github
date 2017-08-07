@@ -1,7 +1,7 @@
 ﻿
 $hosts = (Read-Host "Enter AURA hostnames to apply firewall rules (comma separated)").split(',')
 $fwrs = Import-Csv C:\Scripts\Input\aurapoc-fw.csv
-
+#TODO introduce logging
 ForEach($h in $hosts)
 {
     $cs = New-CimSession -ComputerName $h
