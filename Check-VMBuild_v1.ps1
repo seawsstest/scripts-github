@@ -26,6 +26,8 @@ else
 # Get SCCM/SCOM registry key check
 Write-Host ""
 Write-Host "Checking for SCOM and SCCM registry keys..." -ForegroundColor Yellow
+# TODO fix issue with check grabbing local values
+$s = New-PSSession -ComputerName $fqdn
 $reg = (Invoke-Command -ComputerName $fqdn -ScriptBlock {Get-Item -Path HKLM:HKEY_LOCAL_MACHINE\SOFTWARE\ITS})
 if($reg.Name)
     {
