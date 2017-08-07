@@ -2,7 +2,7 @@
 $cmp = Read-Host "Enter short name of server you are checking in lowercase: "
 $adm = Read-Host "Enter your cnetID"
 #TODO  Add prompt for SA credentials, needed to connect to server to get AV info
-
+# test from Michael
 #Constructed variables
 $ct = $cmp.ToString().Length
 $srch = $cmp.ToString().Insert($ct, "*")
