@@ -10,3 +10,7 @@ $ips = ($fwr.'Remote Address').Split(' ')
 New-NetFirewallRule -CimSession $cs -Name $fwr.Name -DisplayName $fwr.Name -Description $fwr.Description -Enabled True -Profile Domain,Public,Private -Action $fwr.Action -LocalAddress $fwr.'Local Address' -RemoteAddress $ips -Protocol $fwr.Protocol -LocalPort $fwr.'Local Port' -RemotePort $fwr.'Remote Port'}
     Remove-CimSession $cs
 }
+
+
+# add1 branch
+Write-out "testing branch and merge"
